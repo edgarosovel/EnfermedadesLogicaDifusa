@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Diagnostico de enfermedades respiratorias | Lógica difusa</title>
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+	<link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+	<link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+	<script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+</head>
+<body>
+	<!-- PANTALLA DE INICIO / PRESENTACION -->
+	<div class="inicio" id="inicio">
+		<h1 class="titulo-inicio">DIAGNÓSTICO DE ENFERMEDADES RESPIRATORIAS APLICANDO LÓGICA DIFUSA</h1>
+		<div class="integrantes">
+			<p>Proyecto realizado por:</p>
+			<p>Edgar Osornio Velázquez - 253810 · Abigail · Diego Said Mancilla</p>
+		</div>
+		<button class="button button--outline" onclick="empezar()">Empezar</button>
+	</div>
+
+	<!-- FORMULARIO DE SÍNTOMAS -->
+	<h1 class="titulo">DIAGNÓSTICO DE ENFERMEDADES RESPIRATORIAS</h1>
+	<div id="contenedor">
+		<p>A continuación se presentan diversos síntomas propios de enfermedades respiratorias.</p>
+		<p>Escoge la intensidad del síntoma en una escala del 1 al 10.</p>
+		<br>
+		<div class="derecha">
+			<p>Tipo de composición:</p>
+			<label class="radio-button radio-button--material">
+				<input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+				<div class="radio-button__checkmark radio-button--material__checkmark"></div>
+				Max-Min
+			</label>
+			<label class="radio-button radio-button--material">
+				<input type="radio" class="radio-button__input radio-button--material__input" name="r">
+				<div class="radio-button__checkmark radio-button--material__checkmark"></div>
+				Max-Prod
+			</label>
+		</div>
+
+		<div id="contenedor-sintomas"></div>
+
+		<button class="button button--outline derecha" onclick="evaluar()">Diagnosticar</button>
+	</div>
+
+	<!-- RESULTADOS DE DIAGNOSTICO -->
+
+
+</body>
+<script type="text/javascript" src="sintomas.js"></script>
+<script type="text/javascript" src="enfermedades.js"></script>
+<script type="text/javascript" src="main.js" onload="start()"></script>
+</html>

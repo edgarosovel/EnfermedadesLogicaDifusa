@@ -1,0 +1,123 @@
+:root{
+	--color-primario: #FFF;
+	-color-secundario: #efeff4;
+}
+
+@font-face {
+    font-family: Avenir;
+    src: url(fonts/Avenir.ttc);
+}
+
+@font-face {
+    font-family: SF-Pro;
+    src: url(fonts/SF-Pro.otf);
+}
+
+*{
+	border:none;
+	padding: 0px;
+	margin: 0px;
+	outline: none;
+	box-sizing: border-box;
+	font-family: 'Avenir', sans-serif;
+}
+
+body, html{
+	height: 100%;
+	width: 100%;
+	background-color: var(--color-primario);
+	overflow: auto !important;
+}
+
+.inicio{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	padding: 10%;
+	background-color: var(--color-primario);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	justify-content: space-evenly;
+	z-index: 2;
+	background: #ECE9E6;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	visibility: visible;
+	opacity: 1;
+	transition-delay: 0s;		
+}
+.inicio-oculto{
+	visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.33s linear 0.33s, opacity 0.33s linear;
+}
+.titulo{
+	/* font-family: 'SF-Pro', sans-serif; */
+	font-size: 50px;
+	color:rgba(0,0,0,0.3);
+	margin-top: 25px; 
+	margin-left: 4%;
+	margin-right: 4%;
+}
+
+.titulo-inicio{
+	/* font-family: 'SF-Pro', sans-serif; */
+	font-size: 50px;
+	color:rgba(0,0,0,0.3);
+}
+
+.nombre-sintoma{
+	font-family: 'SF-Pro', sans-serif;
+	font-size: 18px;
+}
+
+.valor-sintoma{
+	font-family: 'SF-Pro', sans-serif;
+	font-size: 14px;
+}
+
+#contenedor{
+	margin: 10px 4%;
+	padding: 3.5vw 5vw;
+	width: 92%;
+	background-color: white;
+	border-radius: 7px;
+	box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.4);
+	float: left;
+}
+
+#contenedor-sintomas{
+	width: 100%;
+	float: left;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-evenly;
+	margin-bottom: 30px;
+}
+
+.sintomas{
+	flex-grow: 1;
+	margin: 10px;
+	padding: 15px;
+	border-style: solid;
+	border-radius: 7px;
+	/* width: 300px; */
+	border-width: 1px;
+	border-color: rgba(0,0,0,0.1);
+}
+	.range{
+		width: 100% !important;
+	}
+	.izquierda{
+		float: left;
+	}
+	.derecha{
+		float: right;
+	}
+	.notification{
+		margin: 8px 0px !important;
+		/* background-color: !important; */
+	}
