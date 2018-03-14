@@ -2,58 +2,54 @@ var sintomas = [
     
     {
         "nombre":"Piel con color azul",
-        "escala":["normal","azul"]
+        "escala":["poco","mucho"]
     },
     {
         "nombre":"Dedos de la mano hinchados en la parte más distal",
         "escala":["pocas","muchas"]
     },
     {
-        "nombre":"Palidez",
-        "escala":["poca","mucha"]
-    },
-    {
-        "nombre":"Sudoración excesivas",
+        "nombre":"Fiebre",
         "escala":["poco","mucho"]
-    },
-    {
-        "nombre":"Pérdida de peso",
-        "escala":["poca","mucha"]
     },
     {
         "nombre":"Respiración sibilante",
         "escala":["poca","mucha"]
     },
     {
-        "nombre":"Delirios (confusión)",
-        "escala":["poca","mucha"]
-    },
-    {
-        "nombre":"Mal aliento severo",
-        "escala":["poco","mucho"]
-    },
-    {
-        "nombre":"Ojeras",
-        "escala":["poco","mucho"]
-    },
-    {
-        "nombre":"Opresión en el pecho",
-        "escala":["poco","mucho"]
-    },
-    {
-        "nombre":"Dolores en el pecho",
-        "escala":["poco","mucho"]
-    },
-    {
-        "nombre":"Insuficiencia respiratoria",
-        "escala":["poco","mucho"]
-    },
-    {
         "nombre":"Problemas respiratorios,en especial cuando se hace deporte",
         "escala":["poco","mucho"]
     },
     {
-        "nombre":"Trabajo para recobrar el aliento o hablar",
+        "nombre":"Perdia de peso",
+        "escala":["poco","mucho"]
+    },
+    {
+        "nombre":"Dolor en el Pecho",
+        "escala":["poco","mucho"]
+    },
+    {
+        "nombre":"Expectoración de sangre o espuma con sangre",
+        "escala":["poco","mucho"]
+    },
+    {
+        "nombre":"Piel con color azul",
+        "escala":["poco","mucho"]
+    },
+    {
+        "nombre":"Sudoración excesiva",
+        "escala":["poco","mucho"]
+    },
+    {
+        "nombre":"Tos y aumento de la mucosidad, normalmente al levantarse por la mañana",
+        "escala":["poco","mucho"]
+    },
+    {
+        "nombre":"Respiración sibilante",
+        "escala":["poco","mucho"]
+    },
+    {
+        "nombre":"Falta de energía",
         "escala":["poco","mucho"]
     },
     {
@@ -61,7 +57,39 @@ var sintomas = [
         "escala":["poco","mucho"]
     },
     {
-        "nombre":"Tos con sangre o esputo (saliva o flema) del color del metal oxidado",
+        "nombre":"Náuseas",
+        "escala":["poco","mucho"]
+    },
+    {
+        "nombre":"Vómitos",
+        "escala":["poco","mucho"]
+    },
+    {
+        "nombre":"Labios azules ",
+        "escala":["poco","mucho"]
+    },
+    {
+        "nombre":"Una picazón en el cuello",
+        "escala":["poco","mucho"]
+    },
+    {
+        "nombre":"Gradual oscurecimiento de las uñas, llevando incluso a su ruptura",
+        "escala":["poco","mucho"]
+    },
+    {
+        "nombre":"uñas de color azul",
+        "escala":["poco","mucho"]
+    },
+    {
+        "nombre":"El corazón le tarde muy rápido",
+        "escala":["poco","mucho"]
+    },
+    {
+        "nombre":"Dolor severo del hombro",
+        "escala":["poco","mucho"]
+    },
+    {
+        "nombre":"Dolor en los huesos",
         "escala":["poco","mucho"]
     },
     {
@@ -69,31 +97,11 @@ var sintomas = [
         "escala":["poco","mucho"]
     },
     {
-        "nombre":"Dolor que empeora al tragar o hablar",
+        "nombre":"Dolor de Oido",
         "escala":["poco","mucho"]
     },
     {
         "nombre":"Cuerpo Cortado",
         "escala":["poco","mucho"]
-    },
-    {
-        "nombre":"Dolor de cabeza",
-        "escala":["poco","mucho"]
-    },
-    {
-        "nombre":"nauseas",
-        "escala":["poco","mucho"]
-    },
-    {
-        "nombre":"Vomito",
-        "escala":["poco","mucho"]
-    },
-    {
-        "nombre":"Fiebre",
-        "escala":["poco","mucho"]
-    },
-    {
-        "nombre":"Fatiga",
-        "escala":["poco","mucho"]
     }
-]
+];
