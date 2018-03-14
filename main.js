@@ -1,4 +1,4 @@
-const UMBRAL = 2; //Umbral que debe pasar la suma de la membresía para ser considerada
+const UMBRAL = 1; //Umbral que debe pasar la suma de la membresía para ser considerada
 
 function cambiarVista(id_vista_actual, id_vista_nueva){
     // OCULTAMOS VISTA ACTUAL
