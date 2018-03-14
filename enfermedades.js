@@ -7,10 +7,10 @@ var enfermedades = [
 			"Piel con color azul":0.6,	
 			"Dedos de la mano hinchados en la parte más distal":0.7,	
 			"Fiebre":0.5,
-			"Respiración sibilantes":0.5,
-			"Problemas respiratorios,en especial cuando se hace deporte":0.6,
-			"Perdia de peso":0.5,	
-			"Dolor en el Pecho":0.4
+			"Respiración sibilante":0.5,
+			"Problemas respiratorios, en especial cuando se hace deporte":0.6,
+			"Pérdida de peso":0.5,	
+			"Dolor en el pecho":0.4
 			}
 	},
 	{
@@ -21,7 +21,7 @@ var enfermedades = [
 			"Expectoración de sangre o espuma con sangre":0.6,
 			"Piel con color azul":0.4,
 			"Sudoración excesiva":0.7,	
-			"Fiebre":0.5,
+			"Fiebre":0.5
 			}
 	},
 
@@ -46,7 +46,7 @@ var enfermedades = [
 			"Mal aliento severo":0.7,	
 			"Fiebre":0.5,	
 			"Vómitos":0.5,
-			"Labios azules ":0.6,
+			"Labios azules":0.6,
 			"Náuseas":0.6
 			}
 	},
@@ -58,8 +58,7 @@ var enfermedades = [
 			"Dificultad para respirar":0.4,	
 			"Una picazón en el cuello":0.5,	
 			"Mal aliento severo":0.7,	
-			"Fiebre":0.5,
-			
+			"Fiebre":0.5
 			}
 	},
 	{
@@ -68,14 +67,13 @@ var enfermedades = [
 		"recomendacion":"Lave sus manos y cara antes de comer, beber, ir al baño, fumar o ponerse maquillaje.",
 		"sintomas":{
 			"Dificultad para respirar":0.5,
-			"Problemas respiratorios,en especial cuando se hace deporte":0.6,
-			"Dolores en el pecho":0.7,
+			"Problemas respiratorios, en especial cuando se hace deporte":0.6,
+			"Dolor en el pecho":0.7,
 			"Mal aliento severo":0.4,	
 			"Fiebre":0.5,
 			"Gradual oscurecimiento de las uñas, llevando incluso a su ruptura":0.7,
-			"Perdida de peso":0.6,
-			"Piel con color azul":0.5,
-				
+			"Pérdida de peso":0.6,
+			"Piel con color azul":0.5
 			}
 	},
 		{
@@ -84,12 +82,12 @@ var enfermedades = [
 		"recomendacion":"No exponerse a los factores de riesgo que la originan: el tabaco y los ambientes contaminados.",
 		"sintomas":{
 			"Dificultad para respirar":0.6,
-			"Dolores en el pecho":0.7,
+			"Dolor en el pecho":0.7,
 			"Mal aliento severo":0.4,	
 			"Fiebre":0.5,	
-			"uñas de color azul":0.5,
+			"Uñas de color azul":0.5,
 			"Piel con color azul":0.5,	
-			"El corazón le tarde muy rápido":0.6
+			"El corazón le late muy rápido":0.6
 			}
 	},
 	{
@@ -110,9 +108,8 @@ var enfermedades = [
 		"sintomas":{
 			"Dolor de garganta":0.7,
 			"Pérdida de peso":0.3,	
-			"Dolor de Oido":0.5,	
-			"Dificultad al respirar":0.3,
-			
+			"Dolor de oido":0.5,	
+			"Dificultad para respirar":0.3
 			}
 	},
 	{
@@ -123,10 +120,9 @@ var enfermedades = [
 			"Cuerpo Cortado":0.7,	
 			"Pérdida de peso":0.3,
 			"Náuseas":0.5,
-			"Vomito":0.5,	
+			"Vómitos":0.5,	
 			"Dolor de garganta":0.5,
-			"Dificultad al respirar":0.3,
-			
+			"Dificultad para respirar":0.3
 			}
 	}
 ]

@@ -13,19 +13,15 @@ var sintomas = [
         "escala":["poco","mucho"]
     },
     {
-        "nombre":"Respiración sibilante",
-        "escala":["poca","mucha"]
-    },
-    {
-        "nombre":"Problemas respiratorios,en especial cuando se hace deporte",
+        "nombre":"Problemas respiratorios, en especial cuando se hace deporte",
         "escala":["poco","mucho"]
     },
     {
-        "nombre":"Perdia de peso",
+        "nombre":"Pérdida de peso",
         "escala":["poco","mucho"]
     },
     {
-        "nombre":"Dolor en el Pecho",
+        "nombre":"Dolor en el pecho",
         "escala":["poco","mucho"]
     },
     {
@@ -65,7 +61,7 @@ var sintomas = [
         "escala":["poco","mucho"]
     },
     {
-        "nombre":"Labios azules ",
+        "nombre":"Labios azules",
         "escala":["poco","mucho"]
     },
     {
@@ -77,11 +73,11 @@ var sintomas = [
         "escala":["poco","mucho"]
     },
     {
-        "nombre":"uñas de color azul",
+        "nombre":"Uñas de color azul",
         "escala":["poco","mucho"]
     },
     {
-        "nombre":"El corazón le tarde muy rápido",
+        "nombre":"El corazón le late muy rápido",
         "escala":["poco","mucho"]
     },
     {
@@ -97,7 +93,7 @@ var sintomas = [
         "escala":["poco","mucho"]
     },
     {
-        "nombre":"Dolor de Oido",
+        "nombre":"Dolor de oido",
         "escala":["poco","mucho"]
     },
     {

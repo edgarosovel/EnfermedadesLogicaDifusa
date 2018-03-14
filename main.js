@@ -1,4 +1,4 @@
-const UMBRAL = 3; //La máxima suma de síntomas de una enfermedad es 8
+const UMBRAL = 2; //Umbral que debe pasar la suma de la membresía para ser considerada
 
 function cambiarVista(id_vista_actual, id_vista_nueva){
     // OCULTAMOS VISTA ACTUAL
@@ -15,7 +15,10 @@ function actualizarValorSlider(slider){
     document.getElementById("val"+slider.id).innerText = "Valor: "+ (Number(slider.value / 10));
     slider.style = "background-size: "+slider.value+"% 2px"
 } 
-
+function actualizarValorSlider2(slider){
+    document.getElementById("val2"+slider.id).innerText = "Valor: "+ (Number(slider.value / 10));
+    slider.style = "background-size: "+slider.value+"% 2px"
+} 
 function start(){
     contenedor_sintomas = document.getElementById('contenedor-sintomas');
     contenedor_sintomas2 = document.getElementById('contenedor-sintomas2');
@@ -23,7 +26,7 @@ function start(){
     html2 = '';
     for (var sintoma of sintomas){
         html += '<div class="sintomas"><h2 class="nombre-sintoma">'+sintoma.nombre+'</h2><span class="notification" id="val'+sintoma.nombre+'">Valor: 0</span><br><div class="range"><input type="range" min="0" max="100" value="0" class="range__input range__input--active range_sintomas" onchange="actualizarValorSlider(this)" oninput="actualizarValorSlider(this)" id="'+sintoma.nombre+'"></div><p class="izquierda">'+ sintoma.escala[0] + '</p><p class="derecha">' + sintoma.escala[1] + '</p></div>';   
-        html2 += '<div class="sintomas"><h2 class="nombre-sintoma">'+sintoma.nombre+'</h2><span class="notification" id="val2'+sintoma.nombre+'">Valor: 0</span><br><div class="range"><input type="range" min="0" max="100" value="0" class="range__input range__input--active range_sintomas2" onchange="actualizarValorSlider(this)" oninput="actualizarValorSlider(this)" id="2'+sintoma.nombre+'"></div><p class="izquierda">'+ sintoma.escala[0] + '</p><p class="derecha">' + sintoma.escala[1] + '</p></div>';   
+        html2 += '<div class="sintomas"><h2 class="nombre-sintoma">'+sintoma.nombre+'</h2><span class="notification" id="val2'+sintoma.nombre+'">Valor: 0</span><br><div class="range"><input type="range" min="0" max="100" value="0" class="range__input range__input--active range_sintomas2" onchange="actualizarValorSlider(this)" oninput="actualizarValorSlider2(this)" id="'+sintoma.nombre+'"></div><p class="izquierda">'+ sintoma.escala[0] + '</p><p class="derecha">' + sintoma.escala[1] + '</p></div>';   
     }
     contenedor_sintomas.innerHTML = html;
     contenedor_sintomas2.innerHTML = html2;
@@ -82,7 +85,7 @@ function mostrar_resultados(resultados, enfermedades=undefined){
             msj+="<p><b>Recomendaciones:</b></p><p>"+resultado.enfermedad.recomendacion+"</p><br><br>";
         });
     }else{
-        msj="Ninguna enfermedad cuadra con sus síntomas.";
+        msj+="Ninguna enfermedad cuadra con sus síntomas.";
     }
     div_resultados.innerHTML = msj;
 }
@@ -98,6 +101,7 @@ function evaluar_general(){
 	sintomas_paciente = Array();
     resultados = Array();
 
+    console.log(inputs);
     //Se obtienen los valores de los síntomas del usuario
     [...inputs].forEach(function(input) {
         sintomas_paciente.push(
@@ -107,12 +111,13 @@ function evaluar_general(){
             }
         );
     });
-    
     enfermedades.forEach(function(enfermedad) {
         suma_de_membresia = 0;
         sintomas_paciente.forEach(function(sintoma){
             suma_de_membresia += Math.min(enfermedad.sintomas[sintoma.nombre], sintoma.valor) || 0;
+            console.log(sintoma.nombre+" Sintoma "+sintoma.valor + " enf "+enfermedad.sintomas[sintoma.nombre]+" Suma "+suma_de_membresia);
         });
+        console.log(enfermedad.nombre,+" "+suma_de_membresia);
         if (suma_de_membresia>UMBRAL){
             if (resultados[0] && resultados[0].membresia < suma_de_membresia){
                 resultados = [
@@ -130,6 +135,7 @@ function evaluar_general(){
                 );
             }
         }
+        console.log(resultados)
     });
     mostrar_resultados(resultados);
 }
@@ -141,6 +147,7 @@ function evaluar_especifico(){
     [...enfermedades_inputs].forEach(function(input) {
         if (input.checked){
             for (var enfermedad of enfermedades){
+                console.log(enfermedad.nombre+ " " + input.id);
                 if (enfermedad.nombre==input.id){
                     enfermedades_seleccionadas.push(enfermedad);
                     break;
@@ -148,6 +155,8 @@ function evaluar_especifico(){
             }
         }
     });
+    console.log(enfermedades_seleccionadas);
+
     if(enfermedades_seleccionadas.length<2){
         toast("Seleccione dos o más enfermedades de la lista para realizar un diagnóstico");
         return
@@ -169,6 +178,7 @@ function evaluar_especifico(){
         suma_de_membresia = 0;
         sintomas_paciente.forEach(function(sintoma){
             suma_de_membresia += Math.min(enfermedad.sintomas[sintoma.nombre], sintoma.valor) || 0;
+            console.log(sintoma.nombre+" Sintoma "+sintoma.valor + " enf "+enfermedad.sintomas[sintoma.nombre]+" Suma "+suma_de_membresia);
         });
         if (suma_de_membresia>UMBRAL){
             if (resultados[0] && resultados[0].membresia < suma_de_membresia){
@@ -187,8 +197,9 @@ function evaluar_especifico(){
                 );
             }
         }
+        console.log(resultados)
     });
-    mostrar_resultados(resultados,enfermedades_seleccionadas);
+    mostrar_resultados(resultados, enfermedades_seleccionadas);
 }
 
 function toast(mensaje){
