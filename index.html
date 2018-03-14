@@ -9,43 +9,68 @@
 	<script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
 </head>
 <body>
-	<!-- PANTALLA DE INICIO / PRESENTACION -->
+	<!-- PANTALLA DE INICIO / PRESENTACION  ID=INICIO-->
 	<div class="inicio" id="inicio">
 		<h1 class="titulo-inicio">DIAGNÓSTICO DE ENFERMEDADES RESPIRATORIAS APLICANDO LÓGICA DIFUSA</h1>
 		<div class="integrantes">
 			<p>Proyecto realizado por:</p>
-			<p>Edgar Osornio Velázquez - 253810 · Abigail · Diego Said Mancilla</p>
+			<p>Edgar Osornio Velázquez · Abigail Resendiz Montes De Oca · Diego Said Anaya Mancilla</p>
 		</div>
-		<button class="button button--outline" onclick="empezar()">Empezar</button>
+		<div class="botones">
+				<button class="button button--outline" onclick="mostrar_diagnostico_general()">Diagnóstico general</button>
+				<button class="button button--outline" onclick="mostrar_diagnostico_especifico()">Diagnóstico específico</button>
+		</div>
 	</div>
 
-	<!-- FORMULARIO DE SÍNTOMAS -->
-	<h1 class="titulo">DIAGNÓSTICO DE ENFERMEDADES RESPIRATORIAS</h1>
+	<!-- DIAGNOSTICO GENERAL ID=DIAGNOSTICO-GENERAL-->
+	<div class="diagnostico-general-oculto" id="diagnostico-general">
+	<button class="button boton-menu derecha" onclick="general_a_principal()">MENÚ PRINCIPAL</button>
+	<h1 class="titulo">DIAGNÓSTICO GENERAL</h1>
 	<div id="contenedor">
 		<p>A continuación se presentan diversos síntomas propios de enfermedades respiratorias.</p>
 		<p>Escoge la intensidad del síntoma en una escala del 1 al 10.</p>
 		<br>
-		<div class="derecha">
-			<p>Tipo de composición:</p>
-			<label class="radio-button radio-button--material">
-				<input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
-				<div class="radio-button__checkmark radio-button--material__checkmark"></div>
-				Max-Min
-			</label>
-			<label class="radio-button radio-button--material">
-				<input type="radio" class="radio-button__input radio-button--material__input" name="r">
-				<div class="radio-button__checkmark radio-button--material__checkmark"></div>
-				Max-Prod
-			</label>
-		</div>
+		<div class="contenedor-sintomas" id="contenedor-sintomas"></div>
+		<button class="button button--outline derecha" onclick="evaluar_general()">Diagnosticar</button>
+	</div>
+	</div>
 
-		<div id="contenedor-sintomas"></div>
-
-		<button class="button button--outline derecha" onclick="evaluar()">Diagnosticar</button>
+	<!-- DIAGNÓSTICO ESPECÍFICO -->
+	<div class="diagnostico-especifico-oculto" id="diagnostico-especifico">
+	<button class="button boton-menu derecha" onclick="especifico_a_principal()">MENÚ PRINCIPAL</button>
+	<h1 class="titulo">DIAGNÓSTICO ESPECÍFICO</h1>
+	<div id="contenedor">
+		<p>Escoja las enfermedes con las cuales quiera realizar el diagnóstico específico (mínimo 2):</p>
+		<br>
+		<ul class="list" id="contenedor-enfermedades"></ul>
+		<br><br>
+		<p>A continuación se presentan diversos síntomas propios de enfermedades respiratorias.</p>
+		<p>Escoge la intensidad del síntoma en una escala del 1 al 10.</p>
+		<br>
+		<div class="contenedor-sintomas"	id="contenedor-sintomas2"></div>
+		<button class="button button--outline derecha" onclick="evaluar_especifico()">Diagnosticar</button>
+	</div>
 	</div>
 
 	<!-- RESULTADOS DE DIAGNOSTICO -->
+	<div class="resultados-oculto" id="resultados">
+		<div class="alert-dialog-mask"></div>
+		<div class="alert-dialog">
+			<div class="alert-dialog-container">
+				<div class="alert-dialog-title"><h2>Resultados del diagnóstico</h2></div>
+				<div class="alert-dialog-content" id="info-resultado">Tu diagnostico es</div>
+				<div class="alert-dialog-footer">
+					<button class="alert-dialog-button alert-dialog-button--primal" onclick="ocultar_resultados()">OK</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
+	<!-- ALERTA -->
+	<div class="toast-oculto" id="toast">
+		<div class="toast__message"><b>ADVERTENCIA: </b>Message Message Message Message Message Message</div>
+		<!-- <button class="toast__button">ACTION</button> -->
+	</div>
 
 </body>
 <script type="text/javascript" src="sintomas.js"></script>

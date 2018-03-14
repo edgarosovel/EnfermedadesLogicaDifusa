@@ -1,6 +1,6 @@
 :root{
 	--color-primario: #FFF;
-	-color-secundario: #efeff4;
+	--color-titulo:rgba(3, 166, 120, 0.7);
 }
 
 @font-face {
@@ -29,6 +29,13 @@ body, html{
 	overflow: auto !important;
 }
 
+.inicio-oculto{
+	visibility: hidden;
+    opacity: 0;
+	transition: all 0.33s;
+	display: none;
+}
+
 .inicio{
 	position: fixed;
 	width: 100%;
@@ -41,31 +48,23 @@ body, html{
 	text-align: center;
 	justify-content: space-evenly;
 	z-index: 2;
-	background: #ECE9E6;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	visibility: visible;
 	opacity: 1;
 	transition-delay: 0s;		
 }
-.inicio-oculto{
-	visibility: hidden;
-    opacity: 0;
-    transition: visibility 0.33s linear 0.33s, opacity 0.33s linear;
-}
+
 .titulo{
 	/* font-family: 'SF-Pro', sans-serif; */
 	font-size: 50px;
 	color:rgba(0,0,0,0.3);
-	margin-top: 25px; 
-	margin-left: 4%;
-	margin-right: 4%;
+	margin: 4% 4%; 
 }
 
 .titulo-inicio{
 	/* font-family: 'SF-Pro', sans-serif; */
+	font-weight: bolder;
 	font-size: 50px;
-	color:rgba(0,0,0,0.3);
+	color: var(--color-titulo);
 }
 
 .nombre-sintoma{
@@ -88,7 +87,7 @@ body, html{
 	float: left;
 }
 
-#contenedor-sintomas{
+.contenedor-sintomas{
 	width: 100%;
 	float: left;
 	display: flex;
@@ -121,3 +120,97 @@ body, html{
 		margin: 8px 0px !important;
 		/* background-color: !important; */
 	}
+
+.toast-oculto{
+	visibility: hidden;
+	opacity: 0;
+	transition: all 2.33s;
+	/* -moz-transition: all 2.33s;
+	-ms-transition: all 2.33s;
+	-o-transition: all 2.33s;
+	-webkit-transition: all 2.33s; */
+}
+
+.toast{
+	position: fixed !important;
+	background-color: rgba(240,52,52, .8) !important;
+	visibility: visible;
+	opacity: 1;
+	/* -webkit-transition: all 2.33s;
+	transition: all 2.33s;
+	-moz-transition: all 2.33s;
+	-ms-transition: all 2.33s;
+	-o-transition: all 2.33s;
+	-webkit-transition: all 2.33s; */
+}
+
+.boton-menu{
+	right: 4%;
+	/* position: fixed !important; */
+	z-index: 3;
+}
+
+.diagnostico-general-oculto{
+	visibility: hidden;
+    opacity: 0;
+	transition: all 0.33s;
+	display: none;
+}
+
+.diagnostico-general{
+	visibility: visible;
+	opacity: 1;
+	transition-delay: 0s;
+	display: block;
+	transition: all 0.33s;
+}
+
+.diagnostico-especifico-oculto{
+	visibility: hidden;
+    opacity: 0;
+	transition: all 0.33s;
+	display: none;
+}
+
+.diagnostico-especifico{
+	visibility: visible;
+	opacity: 1;
+	transition-delay: 0s;
+	display: block;
+}
+
+.alert-dialog-mask{
+	position: fixed !important;
+	z-index: 4;
+}
+.alert-dialog{
+	position: fixed !important;
+	z-index: 4;
+	height: 80% !important;
+	width: 80% !important;
+}
+.alert-dialog-content{
+	text-align: left !important;
+	margin: 15px;
+}
+.alert-dialog-container{
+	overflow-y: scroll !important;
+}
+.alert-dialog-footer{
+	position: fixed;
+	bottom: 0;
+}
+.resultados-oculto{
+	overflow-y: scroll;
+	visibility: hidden;
+    opacity: 0;
+	transition: all 0.33s;
+	display: none;
+}
+.resultados{
+	overflow-y: scroll;
+	visibility: visible;
+	opacity: 1;
+	transition-delay: 0s;
+	display: block;
+}
