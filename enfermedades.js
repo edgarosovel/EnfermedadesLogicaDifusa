@@ -117,7 +117,7 @@ var enfermedades = [
 		"descripcion":"Se produce como resultado de virus que, generalmente, produce infección de garganta, pulmones y nariz.",
 		"recomendacion":"Es aconsejable prevenir la gripe no solo con la vacunación, si no evitando el contagio, lavándose las manos cuando se cree ha estado en contacto con el virus",
 		"sintomas":{
-			"Cuerpo Cortado":0.7,	
+			"Cuerpo cortado":0.7,	
 			"Pérdida de peso":0.3,
 			"Náuseas":0.5,
 			"Vómitos":0.5,	

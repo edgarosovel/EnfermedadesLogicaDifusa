@@ -29,10 +29,6 @@ var sintomas = [
         "escala":["poco","mucho"]
     },
     {
-        "nombre":"Piel con color azul",
-        "escala":["poco","mucho"]
-    },
-    {
         "nombre":"Sudoración excesiva",
         "escala":["poco","mucho"]
     },
@@ -97,7 +93,7 @@ var sintomas = [
         "escala":["poco","mucho"]
     },
     {
-        "nombre":"Cuerpo Cortado",
+        "nombre":"Cuerpo cortado",
         "escala":["poco","mucho"]
     }
 ];
